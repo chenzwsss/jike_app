@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jike_app/home/home_page_sub.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -62,11 +63,12 @@ class _HomePageState extends State<HomePage> {
         ),
         body: TabBarView(
           children: <Widget>[
-            Center(child: Text('guanzhu')),
+            HomePageSub(),
             Center(child: Text('tuijian')),
             Center(child: Text('shijiebei'))
           ],
         ),
+        backgroundColor: Colors.black12,
       ),
     );
   }
