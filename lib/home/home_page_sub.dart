@@ -21,7 +21,7 @@ class _HomePageSubState extends State<HomePageSub> {
           child: Column(
             children: <Widget>[
               TitleBar(followInfoList[index]),
-              MiddleContent(),
+              MiddleContent(followInfoList[index]),
               Container(
                 height: 1.0,
                 color: Colors.black12,

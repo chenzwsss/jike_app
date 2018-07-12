@@ -1,18 +1,18 @@
 class FollowInfo {
-  String headImgURL;
-  String headTitle;
-  String time;
-  String mainContent;
-  String markContent;
-  String imgRightURL;
-  List<String> imgURLs;
-  String videoURL;
-  int starNum;
-  int commentNum;
-  int insideShareNum;
+  String headImgURL;//头像
+  String headTitle;//动态标题
+  String time;//动态时间点
+  String mainContent;//主要内容
+  String markContent;//次要描述内容
+  String videoURL;//视频连接
+  String videoThumbnail;//视频缩略图
+  int starNum;//点赞数量
+  int commentNum;//评论数量
+  int insideShareNum;//内部分享数量
+  List<String> imagesList;
 
   FollowInfo(this.headImgURL, this.headTitle, this.time, this.mainContent, this.starNum, this.commentNum,
-      this.insideShareNum, {this.imgURLs, this.videoURL, this.markContent, this.imgRightURL});
+      this.insideShareNum, {this.videoURL, this.videoThumbnail, this.markContent, this.imagesList});
 }
 
 List<FollowInfo> followInfoList = [
@@ -24,10 +24,10 @@ List<FollowInfo> followInfoList = [
       24,
       7,
       10,
-      imgURLs: null,
       videoURL: null,
+      videoThumbnail: null,
       markContent: '一个讲述大公司们如何获取第一批...',
-      imgRightURL: 'https://cdn.ruguoapp.com/FrkBgyHpw9Bzp1imCV2G6UkR1Ct8.jpg?imageView2/0/w/2000/h/400/q/30'
+      imagesList: ['https://cdn.ruguoapp.com/d84b2ed74e2c35015f103805a4711b0f?imageView2/0/w/2000/h/400/q/30']
   ),
   FollowInfo(
       'https://cdn.ruguoapp.com/FhTXF_UZmWUNPzIz5mJLb1AWoAus.png?imageView2/1/w/120/h/120/format/jpeg/q/30',
@@ -37,10 +37,10 @@ List<FollowInfo> followInfoList = [
       14,
       27,
       20,
-      imgURLs: null,
       videoURL: 'https://flutter.github.io/assets-for-api-docs/videos/butterfly.mp4',
+      videoThumbnail: 'https://cdn.ruguoapp.com/FhTXF_UZmWUNPzIz5mJLb1AWoAus.png?imageView2/1/w/120/h/120/format/jpeg/q/30',
       markContent: null,
-      imgRightURL: null
+      imagesList: null
   ),
   FollowInfo(
       'https://cdn.ruguoapp.com/Fjv1twcttU8Ev9mHnuq3S3pPfJmf.png?imageView2/1/w/120/h/120/format/jpeg/q/30',
@@ -50,12 +50,11 @@ List<FollowInfo> followInfoList = [
       114,
       67,
       30,
-      imgURLs: ['https://cdn.ruguoapp.com/4116a3c3ea6cb25805767aab5a515d1f?imageView2/0/w/2000/h/400/q/30',
-      'https://cdn.ruguoapp.com/3384b6f56f20967ea971fb578f8d5a35?imageView2/0/w/2000/h/400/q/30',
-      'https://cdn.ruguoapp.com/93aebce7e3f1dc99260f0f6b60205782?imageView2/0/w/2000/h/400/q/30'],
       videoURL: null,
+      videoThumbnail: null,
       markContent: null,
-      imgRightURL: null
+      imagesList: ['https://cdn.ruguoapp.com/e1f034f1e40485323cd5d371853dc8ac?imageView2/0/w/2000/h/400/q/30',
+                    'https://cdn.ruguoapp.com/b3351de3d13d89deea042d561fef10f4?imageView2/0/w/2000/h/400/q/30']
   ),
   FollowInfo(
       'https://cdn.ruguoapp.com/o_1an09sdd5pe52p9132u1569ddkj.jpg?imageView2/1/w/120/h/120/format/jpeg/q/30',
@@ -65,10 +64,10 @@ List<FollowInfo> followInfoList = [
       1,
       6,
       10,
-      imgURLs: ['https://cdn.ruguoapp.com/8942e9e9ebbb3d280a05889dcd374df5?imageView2/0/w/2000/h/400/q/30'],
       videoURL: null,
+      videoThumbnail: null,
       markContent: null,
-      imgRightURL: null
+      imagesList: ['https://cdn.ruguoapp.com/c2075297acf758994968359e0a99a4b3?imageView2/0/w/2000/h/400/q/30']
   ),
   FollowInfo(
       'https://cdn.ruguoapp.com/o_1a94vq74a9b6cbn1lbcig31mg06g.jpeg?imageView2/1/w/120/h/120/format/jpeg/q/30',
@@ -78,9 +77,17 @@ List<FollowInfo> followInfoList = [
       1,
       6,
       2,
-      imgURLs: null,
       videoURL: null,
+      videoThumbnail: null,
       markContent: 'as high as a kite 烂醉如...',
-      imgRightURL: 'https://pic2.zhimg.com/50/v2-710b7a6fea12a7203945b666790b7181_hd.jpg'
+      imagesList: ['https://cdn.ruguoapp.com/c2075297acf758994968359e0a99a4b3?imageView2/0/w/2000/h/400/q/30',
+      'https://cdn.ruguoapp.com/d5bf8c26a5cc7408d23569a922d642fb?imageView2/0/w/2000/h/400/q/30',
+      'https://cdn.ruguoapp.com/9603783bce3f130339cfe7c34c3eefd5?imageView2/0/w/2000/h/400/q/30',
+      'https://cdn.ruguoapp.com/ab6aba7e6212a62d979146370b83b7bf?imageView2/0/w/2000/h/400/q/30',
+      'https://cdn.ruguoapp.com/d3ad8bf67050d6b1a89a18c8b451308e?imageView2/0/w/2000/h/400/q/30',
+      'https://cdn.ruguoapp.com/2f8a5ec9bfd4e0fc8e250369f87ee851?imageView2/0/w/2000/h/400/q/30',
+      'https://cdn.ruguoapp.com/1a4d5334062e80f56f7334bd5b69d5d6?imageView2/0/w/2000/h/400/q/30',
+      'https://cdn.ruguoapp.com/f5ac48290cf285c6bcb88d3b91adc19e?imageView2/0/w/2000/h/400/q/30',
+      'https://cdn.ruguoapp.com/39ec5faaefc307e69da5976c27922e78?imageView2/0/w/2000/h/400/q/30']
   ),
 ];
