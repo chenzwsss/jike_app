@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jike_app/base_data/follow_base_data.dart';
+import 'package:jike_app/home/home_page_grid_images.dart';
 
 class MiddleContent extends StatefulWidget {
   MiddleContent(this.followInfo, {Key key}): super(key: key);
@@ -78,25 +79,6 @@ class _MiddleContentState extends State<MiddleContent> {
     }
   }
 
-  Widget _addImages() {
-    if (widget.followInfo.imagesList != null) {
-      if (widget.followInfo.imagesList.length <= 1) {
-        return Container(
-          margin: const EdgeInsets.only(left: 10.0, top: 10.0),
-          alignment: Alignment.centerLeft,
-          child: Image.network(
-            widget.followInfo.imagesList[0],
-            height: 180.0,
-          ),
-        );
-      } else {
-        return Container();
-      }
-    } else {
-      return Container();
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -104,7 +86,7 @@ class _MiddleContentState extends State<MiddleContent> {
         _addMainContent(),
         _addMarkContent(),
         _addVideo(),
-        _addImages()
+        GridImages(widget.followInfo.imagesList)
       ],
     );
   }
