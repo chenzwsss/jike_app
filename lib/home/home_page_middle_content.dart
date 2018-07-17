@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jike_app/base_data/follow_base_data.dart';
 import 'package:jike_app/home/home_page_grid_images.dart';
+import 'package:jike_app/common/video_page.dart';
 
 class MiddleContent extends StatefulWidget {
   MiddleContent(this.followInfo, {Key key}): super(key: key);
@@ -48,7 +49,11 @@ class _MiddleContentState extends State<MiddleContent> {
     widget.followInfo.videoThumbnail != null) {
       return GestureDetector(
         onTap: () {
-          print('video paly');
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (BuildContext context) {
+              return VideoPage(widget.followInfo);
+            }
+          ));
         },
         child: Container(
           height: 200.0,

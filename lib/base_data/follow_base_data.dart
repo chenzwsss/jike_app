@@ -37,7 +37,7 @@ List<FollowInfo> followInfoList = [
       14,
       27,
       20,
-      videoURL: 'https://flutter.github.io/assets-for-api-docs/videos/butterfly.mp4',
+      videoURL: 'http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_20mb.mp4',
       videoThumbnail: 'https://cdn.ruguoapp.com/FhTXF_UZmWUNPzIz5mJLb1AWoAus.png?imageView2/1/w/120/h/120/format/jpeg/q/30',
       markContent: null,
       imagesList: null
